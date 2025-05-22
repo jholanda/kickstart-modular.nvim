@@ -136,6 +136,25 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
+    local dap = require 'dap'
+    dap.adapters.python = {
+      type = 'executable',
+      command = 'python',
+      args = { '-m', 'debugpy.adapter' },
+    }
+
+    dap.configurations.python = {
+      {
+        type = 'python',
+        request = 'launch',
+        name = 'Launch file',
+        program = '${file}',
+        pythonPath = function()
+          return '/usr/bin/python3' -- ajuste o caminho
+        end,
+      },
+    }
+
     dap.adapters.gdb = {
       id = 'gdb',
       type = 'executable',
