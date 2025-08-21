@@ -210,6 +210,7 @@ return {
       local servers = {
         -- clangd = {},
         pyright = {},
+        fortls = {},
         gopls = {
           settings = {
             gopls = {

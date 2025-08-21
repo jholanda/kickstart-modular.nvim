@@ -4,6 +4,8 @@
 -- See the kickstart.nvim README for more information
 return {
   --  { 'github/copilot.vim' },
+  { 'mg979/vim-visual-multi' },
+  { 'ThePrimeagen/vim-be-good' },
   {
     'folke/snacks.nvim',
     priority = 1000,

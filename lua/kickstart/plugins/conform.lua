@@ -40,6 +40,15 @@ return {
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
+      formatters = {
+        fprettify = {
+          command = 'fprettify',
+          -- force your flags here
+          args = { '-i', '4', '$FILENAME' },
+          -- IMPORTANT: fprettify wants a file, not stdin
+          stdin = false,
+        },
+      },
     },
   },
 }
