@@ -10,8 +10,20 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
         styles = {
+
           comments = { italic = false }, -- Disable italics in comments
+          sidebars = 'dark',
+          floats = 'dark',
+          transparent = true,
         },
+        on_colors = function(colors)
+          colors.fg_gutter = '#4a5568'
+          colors.bg = '#0d1117' -- Main background
+          colors.bg_dark = '#010409' -- Darker background
+          colors.bg_float = '#0d1117' -- Floating windows
+          colors.bg_sidebar = '#0d1117' -- Sidebar background
+          colors.comment = '#5c6370'
+        end,
       }
 
       -- Load the colorscheme here.
