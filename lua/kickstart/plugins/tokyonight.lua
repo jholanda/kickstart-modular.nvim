@@ -11,7 +11,7 @@ return {
       require('tokyonight').setup {
         styles = {
 
-          comments = { italic = false }, -- Disable italics in comments
+          comments = { fg = '#79b8a1', italic = false }, -- Disable italics in comments
           sidebars = 'dark',
           floats = 'dark',
           transparent = true,
