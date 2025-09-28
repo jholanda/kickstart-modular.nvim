@@ -210,7 +210,7 @@ return {
       local servers = {
         -- clangd = {},
         pyright = {},
-        fortls = {},
+        fortls = { cmd = { 'fortls', '--lowercase_intrinsics' } },
         gopls = {
           settings = {
             gopls = {
